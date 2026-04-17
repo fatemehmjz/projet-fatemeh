@@ -10,8 +10,11 @@ const ROOT_PATH = __dir__;
 // acceptées mises dans le dossier
 // view/ mise à part la homepage et la 404
 const ARRAY_VALID_PAGES = [
-    'about',
-    'skills',
+    'accueil',
+    'geographie',
+    'histoire',
+    'culture',
+    'galerie',
     'contact',
-    'projects',
+    'liens',
 ];

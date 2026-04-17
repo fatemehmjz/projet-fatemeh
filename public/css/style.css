@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+header{
+    background-image: url(../image/banniere.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    background-position: center;
+}
+
+
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.main-nav {
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.burger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.icon-burger {
+    font-size: 1.4rem;
+}
+
+.nav-links {
+    display: none;
+    list-style: none;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav.open .nav-links {
+    display: block;
+}
+
+.nav-links li {
+    border-top: 1px solid #333;
+}
+
+.nav-links a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-grid figure {
+    margin: 0;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-grid img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.gallery-grid figcaption {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    text-align: center;
+    background: #111;
+    color: #fff;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    .hamburger {
+        display: none;
+    }
+    .nav-links {
+        display: flex;
+        position: static;
+        justify-content: center;
+        width: auto;
+    }
+}
+@media (min-width: 1025px) {
+    .burger-menu,
+    .hamburger { display: none; }
+
+    .nav-links {
+        display: flex;
+        position: static;
+        justify-content: center;
+        width: auto;
+    }
+
+    .nav-links li {
+        border-top: none;
+        margin-right: 1rem;
+    }
+
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+}
+h1{
+    font-size: calc(1.5rem+4vw);
+}
